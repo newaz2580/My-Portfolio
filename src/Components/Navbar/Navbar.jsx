@@ -10,6 +10,7 @@ const Navbar = () => {
          <li><Link smooth to="#qualification" className="hover:underline">Qualification</Link></li>
          <li><Link smooth to="#projects" className="hover:underline">Project</Link></li>
          <li><Link smooth to="#contact" className="hover:underline">Contact</Link></li>
+         <li><Link smooth to="#skills" className="hover:underline">Skills</Link></li>
 
          <li><Link smooth to="#skills" className="hover:underline">Skills</Link></li>
 
