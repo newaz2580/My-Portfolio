@@ -6,20 +6,20 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-3 text-center">
-        {/* Logo */}
+ 
         <img
           src={logo}
           alt="Logo"
           className="w-16 h-16 rounded-full object-cover shadow-md"
         />
 
-        {/* Copyright */}
+      
         <div className="text-gray-700 dark:text-gray-300 text-sm md:text-base select-none">
           © {new Date().getFullYear()}{' '}
           <span className="font-semibold">Mohammad Shahnowaz</span>. All rights reserved.
         </div>
 
-        {/* Social Icons */}
+        {/* social links */}
         <div className="flex gap-5 text-4xl text-blue-700 dark:text-blue-400">
           <a
             href="https://www.facebook.com/"
