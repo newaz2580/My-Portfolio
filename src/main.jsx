@@ -8,6 +8,7 @@ import Home from './Components/Home/Home.jsx'
 import Hero from './Components/Hero/Hero.jsx'
 import About from './Components/About/About.jsx'
 import Qualification from './Components/Qualification/Qualification.jsx'
+
 const router=createBrowserRouter([
   {
    path:'/',

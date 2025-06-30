@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { FaFacebook, FaGithub, FaLinkedin, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -21,11 +28,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-white dark:bg-gray-900 py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left - Contact Info */}
-        <div className="text-gray-700 dark:text-gray-300 space-y-8 order-1 md:order-1">
-          <h2 className="text-4xl font-bold text-blue-800 dark:text-white mb-8">Contact Info</h2>
+    <section
+      id="contact"
+      className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white py-20 px-6"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
+        {/* Left Side: Contact Info */}
+        <div className="space-y-8">
+          <h2 className="text-5xl font-extrabold text-blue-800 dark:text-blue-400 mb-6">
+            Contact Info
+          </h2>
 
           <div className="flex items-center gap-4">
             <FaMapMarkerAlt className="text-blue-600 text-2xl" />
@@ -34,22 +46,16 @@ const Contact = () => {
 
           <div className="flex items-center gap-4">
             <FaPhoneAlt className="text-blue-600 text-2xl" />
-            <span>
-              Phone / WhatsApp:{" "}
-              <a href="tel:+8801687678113" className="hover:underline">
-                01687678113
-              </a>
-            </span>
+            <a href="tel:+8801687678113" className="hover:underline">
+              01687678113
+            </a>
           </div>
 
           <div className="flex items-center gap-4">
             <FaEnvelope className="text-blue-600 text-2xl" />
-            <span>
-              Email:{" "}
-              <a href="mailto:newaz2796@gmail.com" className="hover:underline">
-                newaz2796@gmail.com
-              </a>
-            </span>
+            <a href="mailto:newaz2796@gmail.com" className="hover:underline">
+              newaz2796@gmail.com
+            </a>
           </div>
 
           <div className="flex gap-6 text-3xl mt-8">
@@ -57,7 +63,7 @@ const Contact = () => {
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 transition"
+              className="hover:text-blue-600 transition"
               aria-label="Facebook"
             >
               <FaFacebook />
@@ -66,7 +72,7 @@ const Contact = () => {
               href="https://github.com/newaz2580"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 hover:text-black dark:text-white dark:hover:text-gray-300 transition"
+              className="hover:text-gray-900 dark:hover:text-white transition"
               aria-label="GitHub"
             >
               <FaGithub />
@@ -75,7 +81,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/mohammad-newaz-b44113370/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-700 hover:text-blue-900 transition"
+              className="hover:text-blue-700 transition"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
@@ -83,49 +89,61 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right - Contact Form */}
-        <div className="order-2 md:order-2">
-          <h2 className="text-4xl font-bold text-blue-800 dark:text-white mb-8 text-center md:text-left">Get In Touch</h2>
+        {/* Right Side: Contact Form */}
+        <div>
+          <h2 className="text-5xl font-extrabold text-blue-800 dark:text-blue-400 mb-6 text-center md:text-left">
+            Get In Touch
+          </h2>
+
           {submitted ? (
             <p className="text-green-600 dark:text-green-400 font-semibold text-lg text-center md:text-left">
-              Thanks for your message! I'll get back to you soon.
+              Thanks for your message! I’ll get back to you soon.
             </p>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto md:mx-0">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 max-w-xl mx-auto md:mx-0"
+            >
               <label className="block">
-                <span className="text-gray-700 dark:text-gray-300 font-medium">Name</span>
+                <span className="font-medium text-gray-700 dark:text-gray-300">
+                  Name
+                </span>
                 <input
                   type="text"
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600"
+                  className="mt-1 w-full px-4 py-3 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-600 outline-none"
                   placeholder="Your full name"
                   required
                 />
               </label>
 
               <label className="block">
-                <span className="text-gray-700 dark:text-gray-300 font-medium">Email</span>
+                <span className="font-medium text-gray-700 dark:text-gray-300">
+                  Email
+                </span>
                 <input
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600"
+                  className="mt-1 w-full px-4 py-3 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-600 outline-none"
                   placeholder="you@example.com"
                   required
                 />
               </label>
 
               <label className="block">
-                <span className="text-gray-700 dark:text-gray-300 font-medium">Message</span>
+                <span className="font-medium text-gray-700 dark:text-gray-300">
+                  Message
+                </span>
                 <textarea
                   name="message"
                   rows="5"
                   value={form.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-600"
+                  className="mt-1 w-full px-4 py-3 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-600 outline-none"
                   placeholder="Write your message here..."
                   required
                 ></textarea>

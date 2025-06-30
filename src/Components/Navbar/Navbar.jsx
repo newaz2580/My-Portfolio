@@ -1,48 +1,104 @@
 import React from 'react';
-import logo from '../../assets/Profile-logo.jpeg'
-import { NavHashLink } from 'react-router-hash-link';
+import logo from '../../assets/Profile-logo.jpeg';
 import { HashLink as Link } from "react-router-hash-link";
+
 const Navbar = () => {
-    const links=<>
-         <li><Link smooth to="#top" className="hover:underline">Home</Link></li>
-         <li><Link smooth to="#hero" className="hover:underline">Hero</Link></li>
-         <li><Link smooth to="#about" className="hover:underline">About</Link></li>
-         <li><Link smooth to="#qualification" className="hover:underline">Qualification</Link></li>
-         <li><Link smooth to="#projects" className="hover:underline">Project</Link></li>
-         <li><Link smooth to="#contact" className="hover:underline">Contact</Link></li>
-         <li><Link smooth to="#skills" className="hover:underline">Skills</Link></li>
-
-         <li><Link smooth to="#skills" className="hover:underline">Skills</Link></li>
-
-        
+  const links = (
+    <>
+      <li>
+        <Link smooth to="#top" className="hover:underline hover:text-blue-600 transition">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link smooth to="#hero" className="hover:underline hover:text-blue-600 transition">
+          Hero
+        </Link>
+      </li>
+      <li>
+        <Link smooth to="#about" className="hover:underline hover:text-blue-600 transition">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link smooth to="#qualification" className="hover:underline hover:text-blue-600 transition">
+          Qualification
+        </Link>
+      </li>
+       <li>
+        <Link smooth to="#skills" className="hover:underline hover:text-blue-600 transition">
+          Skills
+        </Link>
+      </li>
+      <li>
+        <Link smooth to="#projects" className="hover:underline hover:text-blue-600 transition">
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link smooth to="#contact" className="hover:underline hover:text-blue-600 transition">
+          Contact
+        </Link>
+      </li>
+     
     </>
-    return (
-        <div className=" navbar bg-base-100 shadow-sm sticky top-0 right-0 left-0 z-30 md:px-20">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+  );
+
+  return (
+    <nav className="navbar bg-white dark:bg-gray-900 shadow-md sticky top-0 left-0 right-0 z-40 md:px-20 py-3">
+      {/* Mobile menu button + logo */}
+      <div className="navbar-start flex items-center gap-4">
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 stroke-current text-blue-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white dark:bg-gray-800 rounded-box w-52 text-blue-700 dark:text-blue-300"
+          >
+            {links}
+          </ul>
+        </div>
+
+        {/* Logo */}
+        <Link smooth to="#top" className="flex items-center gap-2">
+          <img src={logo} alt="Logo" className="w-12 h-12 rounded-full object-cover shadow-md" />
+          <span className="text-2xl font-bold text-blue-700 dark:text-blue-400 select-none hidden sm:inline">
+            Shahnowaz
+          </span>
+        </Link>
       </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        {links}
-      </ul>
-    </div>
-    <span>
-        <img src={logo} alt="" className='w-12 h-12 rounded-full' />
-    </span>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      {links}
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn bg-blue-600 text-white text-xl" href='/resume.pdf' download>Resume</a>
-  </div>
-</div>
-    );
+
+      {/* Desktop links */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1 text-blue-700 dark:text-blue-400 font-semibold">
+          {links}
+        </ul>
+      </div>
+
+      {/* Resume Button */}
+      <div className="navbar-end">
+        <a
+          href="/resume.pdf"
+          download
+          className="btn bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-6 py-2 rounded-lg shadow-md transition"
+          aria-label="Download Resume"
+        >
+          Resume
+        </a>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

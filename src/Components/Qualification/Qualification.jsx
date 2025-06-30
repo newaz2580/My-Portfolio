@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const qualifications = [
   {
@@ -18,35 +20,41 @@ const qualifications = [
 ];
 
 const Qualification = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section id="qualification" className="  py-16 px-6">
-      <div className="">
+    <section
+      id="qualification"
+      className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20 px-6"
+    >
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-blue-800 mb-12">
+        <h2 className="text-5xl font-extrabold text-center text-blue-800 dark:text-blue-400 mb-16">
           Qualifications
         </h2>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {qualifications.map((q, index) => (
             <div
               key={index}
-              className="bg-gray-200  shadow-md rounded-xl p-6"
+              className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
             >
-              {/* Degree Info */}
-              <h3 className="text-2xl font-semibold text-blue-700 dark:text-blue-400 mb-2">
+              <h3 className="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-2">
                 {q.title}
               </h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300">{q.major}</p>
-              <p className="text-gray-600 dark:text-gray-400">{q.university}</p>
+              <p className="text-lg font-semibold text-gray-700 dark:text-white">{q.major}</p>
+              <p className="text-gray-600 dark:text-gray-300">{q.university}</p>
               <p className="text-gray-500 dark:text-gray-400 mb-2">
                 CGPA:{" "}
                 <span className="font-medium text-blue-700 dark:text-blue-300">
                   {q.cgpa}
                 </span>
               </p>
-
-              {/* Location */}
               <p className="text-sm text-gray-600 dark:text-gray-400">{q.location}</p>
             </div>
           ))}
