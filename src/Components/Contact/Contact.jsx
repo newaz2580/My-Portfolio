@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   FaFacebook,
   FaGithub,
@@ -7,10 +7,13 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const ref = useRef()
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -23,8 +26,27 @@ const Contact = () => {
       return;
     }
     // TODO: Connect to backend/email service
-    setSubmitted(true);
-    setForm({ name: "", email: "", message: "" });
+setSubmitting(true)
+    emailjs
+      .sendForm("service_g6n6hle", "template_knlgs1y", ref.current, {
+        publicKey: "6wHKj8vUrg68le2-_",
+      })
+      .then(
+        () => {
+setSubmitting(false)
+
+          console.log("SUCCESS!");
+
+          setSubmitted(true);
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error) => {
+setSubmitting(false)
+
+          console.log("FAILED...", error);
+          alert("Failed to send message.");
+        }
+      );
   };
 
   return (
@@ -101,6 +123,7 @@ const Contact = () => {
             </p>
           ) : (
             <form
+            ref={ref}
               onSubmit={handleSubmit}
               className="space-y-6 max-w-xl mx-auto md:mx-0"
             >
@@ -150,10 +173,11 @@ const Contact = () => {
               </label>
 
               <button
+              disabled={submitting}
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition"
               >
-                Send Message
+                {submitting ? "Sending...": "Send Message"}
               </button>
             </form>
           )}
