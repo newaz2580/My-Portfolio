@@ -21,16 +21,17 @@ const Navbar = () => {
           About
         </Link>
       </li>
-      <li>
-        <Link smooth to="/#qualification" className="hover:underline hover:text-blue-600 transition">
-          Qualification
-        </Link>
-      </li>
        <li>
         <Link smooth to="/#skills" className="hover:underline hover:text-blue-600 transition">
           Skills
         </Link>
       </li>
+      <li>
+        <Link smooth to="/#qualification" className="hover:underline hover:text-blue-600 transition">
+          Qualification
+        </Link>
+      </li>
+      
       <li>
         <Link smooth to="/#projects" className="hover:underline hover:text-blue-600 transition">
           Projects
