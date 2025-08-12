@@ -25,7 +25,7 @@ const Footer = () => {
             href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-blue-600 dark:hover:text-blue-500 transition"
+            className="text-blue-600 dark:text-blue-500 transition"
             aria-label="Facebook"
           >
             <FaFacebook />
@@ -34,7 +34,7 @@ const Footer = () => {
             href="https://github.com/newaz2580"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-gray-900 dark:hover:text-white transition"
+            className="text-gray-900 dark:text-white transition"
             aria-label="GitHub"
           >
             <FaGithub />
@@ -43,7 +43,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/mohammad-newaz-b44113370/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-blue-800 dark:hover:text-blue-300 transition"
+            className="text-blue-800 dark:text-blue-300 transition"
             aria-label="LinkedIn"
           >
             <FaLinkedin />
