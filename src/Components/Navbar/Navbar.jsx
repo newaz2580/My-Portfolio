@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/Profile-logo.jpeg';
 import { HashLink as Link } from "react-router-hash-link";
+import ModeToggle from '../ModeToggle';
 
 const Navbar = () => {
   const links = (
@@ -45,7 +46,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="navbar bg-white dark:bg-gray-900 shadow-md sticky top-0 left-0 right-0 z-40 md:px-20 py-3">
+    <nav className="navbar bg-white dark:bg-gray-900 shadow sticky top-0 left-0 right-0 z-40 md:px-20 py-3">
       {/* Mobile menu button + logo */}
       <div className="navbar-start flex items-center gap-4">
         <div className="dropdown">
@@ -96,6 +97,7 @@ const Navbar = () => {
         >
           Resume
         </a>
+        <ModeToggle/>
       </div>
     </nav>
   );

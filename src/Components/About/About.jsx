@@ -6,8 +6,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white py-20 px-6"
+      className="bg-gray-50 dark:bg-gray-950 text-black dark:text-white py-20 px-6"
     >
+      <h2 className="text-5xl font-extrabold text-center text-blue-800 dark:text-blue-400 mb-6">
+  About Me
+</h2>
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* Left Animation */}
         <div className="w-full max-w-md mx-auto md:mx-0">
@@ -16,9 +20,7 @@ const About = () => {
 
         {/* Right Content */}
         <div>
-          <h2 className="text-5xl font-extrabold text-center md:text-left text-blue-800 dark:text-blue-400 mb-6">
-            About Me
-          </h2>
+          
 
           <p className="text-lg text-gray-800 dark:text-gray-300 leading-relaxed text-justify">
             Hello! I'm <span className="font-semibold text-blue-700 dark:text-blue-300">Mohammad Shahnowaz</span>, a passionate Full Stack Developer from Bangladesh. My journey began with curiosity and evolved into a profession where I turn ideas into interactive digital solutions.

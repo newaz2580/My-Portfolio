@@ -12,6 +12,7 @@ import ProjectDetails from './Components/Project/ProjectDetails.jsx'
 import Skills from './Components/Skills/Skills.jsx'
 import Projects from './Components/Project/Project.jsx'
 import Contact from './Components/Contact/Contact.jsx'
+import AuthProvider from './context/AuthProvider.jsx'
 
 const router=createBrowserRouter([
   {
@@ -59,6 +60,9 @@ const router=createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <AuthProvider>
     <RouterProvider router={router}></RouterProvider>
+
+    </AuthProvider>
   </StrictMode>,
 )

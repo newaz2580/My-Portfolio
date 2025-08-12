@@ -18,7 +18,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="project-details max-w-7xl mx-auto pt-5 px-3 bg-gray-800 text-white dark:bg-gray-100 dark:text-black">
+    <section className="project-details max-w-7xl mx-auto pt-5 px-3 bg-white text-gray-800 dark:bg-gray-800 dark:text-white">
       <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
       <p className="mb-4">{project.description}</p>
 

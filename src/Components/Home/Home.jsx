@@ -8,7 +8,7 @@ import Skills from '../Skills/Skills';
 
 const Home = () => {
   return (
-    <div className="px-4 md:px-20 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="px-4 md:px-20 bg-gray-100 dark:bg-gray-900 min-h-screen">
       <Hero />
       <About />
       <Skills />

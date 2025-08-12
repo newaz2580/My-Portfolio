@@ -52,15 +52,18 @@ setSubmitting(false)
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white py-20 px-6"
+      className="bg-gray-50 dark:bg-gray-800 text-black dark:text-white py-20 px-6"
     >
+       <h2 className="text-5xl  text-center font-extrabold text-blue-800 dark:text-blue-400 mb-6">
+            Contact Info
+          </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
         {/* Left Side: Contact Info */}
         <div className="space-y-8">
-          <h2 className="text-5xl font-extrabold text-blue-800 dark:text-blue-400 mb-6">
-            Contact Info
+         
+          <h2 className="text-2xl font-extrabold text-blue-800 dark:text-blue-400 mb-6 text-center md:text-left">
+            Address
           </h2>
-
           <div className="flex items-center gap-4">
             <FaMapMarkerAlt className="text-blue-600 text-2xl" />
             <span>Bangladesh, Dhaka</span>
@@ -69,7 +72,7 @@ setSubmitting(false)
           <div className="flex items-center gap-4">
             <FaPhoneAlt className="text-blue-600 text-2xl" />
             <a href="tel:+8801687678113" className="hover:underline">
-              01687678113
+              +8801687678113
             </a>
           </div>
 
@@ -113,7 +116,7 @@ setSubmitting(false)
 
         {/* Right Side: Contact Form */}
         <div>
-          <h2 className="text-5xl font-extrabold text-blue-800 dark:text-blue-400 mb-6 text-center md:text-left">
+          <h2 className="text-2xl font-extrabold text-blue-800 dark:text-blue-400 mb-6 text-center md:text-left">
             Get In Touch
           </h2>
 

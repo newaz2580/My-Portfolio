@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-20 px-6"
+      className=" py-20 px-6 bg-white dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
 
@@ -34,7 +34,7 @@ const Hero = () => {
               href="https://www.facebook.com/"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-400 transition"
+              className="text-blue-700 dark:text-blue-100 transition"
             >
               <FaFacebook />
             </a>
@@ -42,7 +42,7 @@ const Hero = () => {
               href="https://github.com/newaz2580"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-300 dark:hover:text-white transition"
+              className="text-gray-700 dark:text-white  transition"
             >
               <FaGithub />
             </a>
@@ -50,7 +50,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/mohammad-newaz-b44113370/"
               target="_blank"
               rel="noreferrer"
-              className="text-blue-200 transition"
+              className="text-blue-800 dark:text-white transition"
             >
               <FaLinkedin />
             </a>
