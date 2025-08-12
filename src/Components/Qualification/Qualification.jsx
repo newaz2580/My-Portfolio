@@ -7,14 +7,14 @@ const qualifications = [
     title: "🎓 Master of Business Administration (MBA)",
     major: "Major in Finance",
     university: "World University of Bangladesh",
-    cgpa: "3.56 out of 4.00",
+    cgpa: "3.33 out of 4.00",
     location: "📍 Avenue 6 & Lake Drive Road, Sector # 17/H, Uttara"
   },
   {
     title: "🎓 Bachelor of Business Administration (BBA)",
     major: "Major in Finance",
     university: "World University of Bangladesh",
-    cgpa: "3.33 out of 4.00",
+    cgpa: "3.56 out of 4.00",
     location: "📍 Avenue 6 & Lake Drive Road, Sector # 17/H, Uttara"
   }
 ];
@@ -30,12 +30,12 @@ const Qualification = () => {
       className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20 px-6"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
+      
         <h2 className="text-5xl font-extrabold text-center text-blue-800 dark:text-blue-400 mb-16">
           Qualifications
         </h2>
 
-        {/* Grid Layout */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {qualifications.map((q, index) => (
             <div

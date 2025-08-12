@@ -8,6 +8,10 @@ import Home from './Components/Home/Home.jsx'
 import Hero from './Components/Hero/Hero.jsx'
 import About from './Components/About/About.jsx'
 import Qualification from './Components/Qualification/Qualification.jsx'
+import ProjectDetails from './Components/Project/ProjectDetails.jsx'
+import Skills from './Components/Skills/Skills.jsx'
+import Projects from './Components/Project/Project.jsx'
+import Contact from './Components/Contact/Contact.jsx'
 
 const router=createBrowserRouter([
   {
@@ -15,8 +19,40 @@ const router=createBrowserRouter([
    Component:MainLayout,
    children:[
     {
-      path:'/',
+      index:true,
       Component:Home
+    },
+    {
+      path:'/details',
+      element:<ProjectDetails/>
+    },
+    {
+      path:'/hero',
+      element:<Hero/>
+    },
+    {
+      path:'/about',
+      element:<About/>
+    },
+    {
+      path:'/qualification',
+      element:<Qualification/>
+    },
+    {
+      path:'/skills',
+      element:<Skills/>
+    },
+    {
+      path:'/project',
+      element:<Projects/>
+    },
+    {
+      path:'/contact',
+      element:<Contact/>
+    },
+    {
+      path:'/details/:id',
+      element:<ProjectDetails/>
     }
    ]
   }

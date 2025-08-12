@@ -15,16 +15,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const skills = [
-  { name: "JavaScript", icon: FaJsSquare, color: "#f7df1e", percent: 90 },
-  { name: "React", icon: FaReact, color: "#61dafb", percent: 85 },
-  { name: "Node.js", icon: FaNodeJs, color: "#68a063", percent: 80 },
-  { name: "MongoDB", icon: FaDatabase, color: "#4db33d", percent: 75 },
-  { name: "CSS3", icon: FaCss3Alt, color: "#2965f1", percent: 80 },
-  { name: "HTML5", icon: FaHtml5, color: "#e44d26", percent: 85 },
-  { name: "Git", icon: FaGitAlt, color: "#f34f29", percent: 70 },
-  { name: "Firebase", icon: SiFirebase, color: "#ffca28", percent: 65 },
-  { name: "Express.js", icon: FaServer, color: "#000000", percent: 75 },
-  { name: "Clean Code", icon: FaCode, color: "#4a5568", percent: 90 },
+  { name: "JavaScript", icon: FaJsSquare, color: "#f7df1e"},
+  { name: "React", icon: FaReact, color: "#61dafb"},
+  { name: "Node.js", icon: FaNodeJs, color: "#68a063"},
+  { name: "MongoDB", icon: FaDatabase, color: "#4db33d", },
+  { name: "CSS3", icon: FaCss3Alt, color: "#2965f1"},
+  { name: "HTML5", icon: FaHtml5, color: "#e44d26"},
+  { name: "Git", icon: FaGitAlt, color: "#f34f29"},
+  { name: "Firebase", icon: SiFirebase, color: "#ffca28"},
+  { name: "Express.js", icon: FaServer, color: "#000000"},
+  { name: "Clean Code", icon: FaCode, color: "#4a5568"},
 ];
 
 const circleRadius = 32;
@@ -88,12 +88,7 @@ const Skills = () => {
             <h3 className="text-lg font-semibold text-gray-700 dark:text-white text-center">
               {name}
             </h3>
-            <p
-              className="text-sm font-bold px-3 py-1 rounded-full text-white"
-              style={{ backgroundColor: color }}
-            >
-              {percent}%
-            </p>
+            
           </div>
         ))}
       </div>

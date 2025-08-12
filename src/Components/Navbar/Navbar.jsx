@@ -6,37 +6,37 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link smooth to="#top" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#top" className="hover:underline hover:text-blue-600 transition">
           Home
         </Link>
       </li>
       <li>
-        <Link smooth to="#hero" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#hero" className="hover:underline hover:text-blue-600 transition">
           Hero
         </Link>
       </li>
       <li>
-        <Link smooth to="#about" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#about" className="hover:underline hover:text-blue-600 transition">
           About
         </Link>
       </li>
       <li>
-        <Link smooth to="#qualification" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#qualification" className="hover:underline hover:text-blue-600 transition">
           Qualification
         </Link>
       </li>
        <li>
-        <Link smooth to="#skills" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#skills" className="hover:underline hover:text-blue-600 transition">
           Skills
         </Link>
       </li>
       <li>
-        <Link smooth to="#projects" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#projects" className="hover:underline hover:text-blue-600 transition">
           Projects
         </Link>
       </li>
       <li>
-        <Link smooth to="#contact" className="hover:underline hover:text-blue-600 transition">
+        <Link smooth to="/#contact" className="hover:underline hover:text-blue-600 transition">
           Contact
         </Link>
       </li>
