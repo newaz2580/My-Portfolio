@@ -4,7 +4,7 @@ import projects from '../../data/projectData';
 
 const Projects = () => {
   return (
-    <section id="projects" className="projects-section py-12 px-6 mt-10 bg-white dark:bg-gray-800 ">
+    <section id="projects" className="projects-section py-12 px-6 bg-white dark:bg-gray-800 ">
       <h2 className="text-5xl mb-12 text-center font-extrabold text-blue-600 tracking-wide drop-shadow-lg">
         My Projects
       </h2>

@@ -27,7 +27,7 @@ const Qualification = () => {
   return (
     <section
       id="qualification"
-      className="bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20 px-6"
+      className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-20 px-6"
     >
       <div className="max-w-6xl mx-auto">
       

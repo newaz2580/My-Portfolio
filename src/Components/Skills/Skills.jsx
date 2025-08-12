@@ -85,7 +85,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full px-6 py-20 bg-white dark:bg-gray-800 text-gray-800"
+      className="w-full px-6 py-20 bg-gray-100 dark:bg-gray-800 text-gray-800"
     >
       <h2 className="text-5xl font-extrabold text-center text-blue-800 dark:text-blue-400 mb-16">
         My Skills
