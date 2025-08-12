@@ -8,7 +8,7 @@ const Projects = () => {
       <h2 className="text-5xl mb-12 text-center font-extrabold text-blue-600 tracking-wide drop-shadow-lg">
         My Projects
       </h2>
-      <div className="projects-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projects.map((project) => (
           <div
             key={project.id}

@@ -9,7 +9,7 @@ const Hero = () => {
       id="hero"
       className=" py-20 px-6 bg-white dark:bg-gray-800"
     >
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
 
    
         <motion.div
@@ -78,7 +78,7 @@ const Hero = () => {
           transition={{ duration: 1.2 }}
         >
           <motion.img
-            src="https://i.ibb.co/wtP2h5p/newaz.jpg"
+            src="https://i.ibb.co.com/yc1cCQ12/Whats-App-Image-2025-08-12-at-1-44-05-PM.jpg"
             alt="Mohammad Shahnowaz"
             className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-white dark:border-gray-700"
             animate={{
